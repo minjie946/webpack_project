@@ -6,21 +6,21 @@ export const WebpackDllConfig:Configuration = {
   target: 'web',
   mode: 'production',
   entry: {
-    reactrouterdom: 'react-router-dom',
     react: 'react',
-    reactdom: 'react-dom'
+    reactdom: 'react-dom',
+    reactrouterdom: 'react-router-dom'
   },
   output: {
     path: path.resolve(__dirname, 'dll'),
     publicPath: './',
     filename: '[name].js',
-    library: '[name]_library_wcr'
+    library: '[name]_library'
   },
   plugins: [
     new CleanWebpackPlugin(),
     new DllPlugin({
       path: path.join(__dirname, 'dll', '[name].manifest.json'),
-      name: '[name]_library_wcr'
+      name: '[name]_library'
     })
   ]
 } 

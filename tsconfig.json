@@ -30,7 +30,9 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@util/*": ["src/util/*"],
+      "@components/*": ["src/components/*"],
     },
     "typeRoots": ["typings/*.d.ts", "node_modules/@types"],
     "allowSyntheticDefaultImports": true,

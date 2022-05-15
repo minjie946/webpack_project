@@ -1,20 +1,25 @@
 import React from 'react'
-import { Button, Row, Col } from 'antd'
+import { Row, Col } from 'antd'
+import { CancelItem } from './page/Cancel'
+import { ServiceItem } from './page/Service'
 import avatar from '@assets/avatar.png'
 import './app.less'
 
 export default () => {
-  console.log(process.env.tag)
-  console.log(process.env.version)
+
+
   return <div className='div-container'>
     <p>hello world</p>
-    <img src={avatar}/>
+    <img src={avatar} />
     <Row gutter={[10, 10]}>
-      <Col>
+      <Col span={24}>
         <div className='div-btn'>跳转</div>
       </Col>
-      <Col>
-        <Button type='primary'>跳转</Button>
+      <Col span={24}>
+        <CancelItem />
+      </Col>
+      <Col span={24}>
+        <ServiceItem />
       </Col>
     </Row>
   </div>

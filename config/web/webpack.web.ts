@@ -117,6 +117,8 @@ export const ConfigInit = (mode: "development" | "production"):Configuration => 
     resolve: {
       alias: {
         '@assets': path.resolve(__dirname, '../../src/assets'),
+        '@util': path.resolve(__dirname, '../../src/util'),
+        '@components': path.resolve(__dirname, '../../src/components')
       },
       extensions: ['.tsx', '.js', '.ts', '.less', '.css']
     }

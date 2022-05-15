@@ -18,6 +18,8 @@
   ],
   "dependencies": {
     "antd": "^4.20.4",
+    "axios": "^0.27.2",
+    "qs": "^6.10.3",
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
@@ -43,6 +45,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "compression-webpack-plugin": "^9.2.0",
     "copy-webpack-plugin": "^10.2.4",
+    "core-js": "^3.22.5",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
