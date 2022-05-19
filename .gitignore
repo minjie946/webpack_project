@@ -6,6 +6,7 @@ thumbs.db
 package-lock.json
 yarn-error.log
 yarn.lock
+.DS_store
 
 # 文件夹
 test
