@@ -9,6 +9,7 @@ yarn.lock
 
 # 文件夹
 test
+.DS_Store
 node_modules
 .idea
 dist/*
