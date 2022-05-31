@@ -30,7 +30,8 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@pages/*": ["src/pages/*"]
     },
     "typeRoots": ["typings/*.d.ts", "node_modules/@types"],
     "allowSyntheticDefaultImports": true,
@@ -38,5 +39,5 @@
     "experimentalDecorators": true
   },
   "exclude": ["node_modules", "config/*"],
-  "include": ["src/*", "typings/*.d.ts"]
+  "include": ["src/*", "typings/*.d.ts", "src/pages/lotus/lotus.ts"]
 }

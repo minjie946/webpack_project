@@ -1,5 +1,7 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './app'
+import './index.less'
 
-ReactDom.render(<App/>, document.querySelector('#root'))
+const Dom = createRoot(document.querySelector('#root')!)
+Dom.render(<App/>)
