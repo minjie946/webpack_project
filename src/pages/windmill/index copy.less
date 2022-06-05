@@ -1,0 +1,100 @@
+/**
+ * @description 风车
+ * @author minjie
+ * @Date 2022-06-01 23:14
+ * @LastEditTime 2022-06-04 15:09
+ * @LastEditors minjie
+ */
+
+.windmill-containers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.windmill-bg-container {
+  width: 1080px;
+  height: 1920px;
+  transform: scale(0.4);
+  // background-color: rgba(148, 189, 228, 0.6);
+}
+.windmill-bg-img-container {
+  width: 1080px;
+  height: 1920px;
+  position: absolute;
+  z-index: 1;
+}
+.windmill-body-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border: 1px solid red;
+}
+.windmill-body-center {
+  position: absolute;
+  z-index: 1;
+  bottom: 316px;
+  left: 407px;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 246px;
+  border-radius: 100%;
+  background: #f9f9fb;
+  box-shadow: inset 0px 0px 165px 14px rgb(123 142 168 / 100%);
+  background: radial-gradient(rgba(178, 190, 206, 0.2),  #f9f9fb);
+}
+.windmill-leaf-bottom-container {
+  position: absolute;
+  bottom: 206px;
+  left: 168px;
+  width: 382px;
+  height: 274px;
+  z-index: 1;
+  background: linear-gradient(113deg, rgba(142, 160, 181, 0.6) 70%,  rgba(249, 249, 251, 0.5));
+  border-radius: 208px 281px 525px 3px / 286px 124px 271px 167px;
+  transform: rotateZ(-12deg) rotateY(-13deg);
+  box-shadow: inset 21px 15px 7px -20px rgb(249 249 251 / 53%);
+  clip-path: polygon(61% 0%, 0% 0%, -1% 100%, 48% 100%, 82% 100%, 99% 98%, 100% 62%, 100% 41%, 96% 44%, 94% 46%, 87% 47%, 81% 46%, 76% 43%, 73% 39%, 70% 33%, 61% 10%);
+}
+.windmill-leaf-bottom-right-border1 {
+  position: absolute;
+  bottom: 206px;
+  left: 168px;
+  width: 382px;
+  height: 274px;
+  z-index: 1;
+  border-radius: 208px 281px 525px 3px / 286px 124px 271px 167px;
+  transform: rotateZ(-12deg) rotateY(-13deg);
+  clip-path: polygon(61% 0%, 0% 0%, -1% 100%, 48% 100%, 82% 100%, 99% 98%, 100% 62%, 100% 41%, 96% 44%, 94% 46%, 87% 47%, 81% 46%, 76% 43%, 73% 39%, 70% 33%, 61% 10%);
+  box-shadow: inset -8px -2px 4px -2px rgb(249 249 251 / 53%);
+}
+.windmill-leaf-bottom-right-border2 {
+  position: absolute;
+  bottom: 206px;
+  left: 168px;
+  width: 382px;
+  height: 274px;
+  z-index: 1;
+  border-radius: 208px 281px 525px 3px / 286px 124px 271px 167px;
+  transform: rotateZ(-12deg) rotateY(-13deg);
+  clip-path: polygon(61% 0%, 0% 0%, -1% 100%, 48% 100%, 82% 100%, 99% 98%, 100% 62%, 100% 41%, 96% 44%, 94% 46%, 87% 47%, 81% 46%, 76% 43%, 73% 39%, 70% 33%, 61% 10%);
+  box-shadow: inset -6px 1px 7px -2px rgb(126 143 165 / 29%);
+}
+.windmill-leaf-bottom-top {
+  position: absolute;
+  bottom: 373px;
+  left: 449px;
+  width: 90px;
+  height: 268px;
+  z-index: 2;
+  transform: rotate(-40deg);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 231px 298px;
+  border-bottom-left-radius: 100px 0px;
+  background: linear-gradient(113deg, rgba(142, 160, 181, 0.6) 70%,  rgba(249, 249, 251, 0.5));
+  clip-path: polygon(101% 3%, 26% 4%, 29% 74%, 21% 83%, 22% 82%, 10% 90%, 0% 96%, 26% 93%, 42% 89%,68% 79%,90% 58%);
+}
