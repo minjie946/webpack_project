@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "extends": "standard",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "__static": true,
+    "document": true,
+    "navigator": true,
+    "window": true,
+    "node": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "typescript",
+    "react"
+  ],
+  "rules": {
+    "no-use-before-define": "off",
+    "arrow-parens": "off",
+    "no-useless-return": "off",
+    "generator-star-spacing": "off",
+    "no-debugger": "off",
+    "no-extra-semi": "error",
+    "no-unreachable": "error",
+    "no-dupe-class-members": "off",
+    "no-useless-constructor": "off",
+    "no-unused-vars": "off",
+    "no-useless-escape": "off",
+    "standard/array-bracket-even-spacing": "off",
+    "eqeqeq": [ "error", "always", { "null": "ignore" }],
+    "typescript/class-name-casing": "error"
+  }
+}

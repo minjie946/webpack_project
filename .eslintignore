@@ -1,0 +1,6 @@
+
+test/*
+static/*.js
+config/*
+node_modules/*
+.eslintrc.js
