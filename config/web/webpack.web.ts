@@ -5,6 +5,7 @@ import path from 'path'
 import { Configuration, DefinePlugin } from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import ESLintPlugin from 'eslint-webpack-plugin'
 
 const packages = require('../../package.json')
 
@@ -26,6 +27,10 @@ export const ConfigInit = (mode: "development" | "production"):Configuration => 
     },
     plugins: [
       new MiniCssExtractPlugin({ filename: isPro ? 'css/[name].[contenthash:8].css' : 'css/[name].css' }),
+      new ESLintPlugin({
+        extensions: ['ts', 'tsx', 'js'],
+        formatter: require('eslint-friendly-formatter')
+      }),
       new HtmlWebpackPlugin({
         title: '项目',
         filename: 'index.html',
@@ -47,7 +52,7 @@ export const ConfigInit = (mode: "development" | "production"):Configuration => 
           tag: JSON.stringify(process.env.tag),
           version: JSON.stringify(packages.version)
         }
-      }),
+      })
     ],
     module: {
       rules: [
