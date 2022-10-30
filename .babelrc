@@ -11,7 +11,7 @@
     "@babel/typescript"
   ],
   "plugins": [
-    ["import", { "libraryName": "antd", "style": "css" }, "antd"],
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }, "antd"],
     "dynamic-import-node",
     "@babel/plugin-transform-runtime",
     "@babel/plugin-transform-arrow-functions",

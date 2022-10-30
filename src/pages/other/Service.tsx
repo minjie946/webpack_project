@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState, Profiler, useContext } from 'react'
 import { Card, Space, Button } from 'antd'
 import { BaseAxios } from '@components/axios'
 import { allSettled } from '@util/index'
 import type { AllSettledResponse } from '@util/index'
 import { URLInterface, RequestConfigProps } from '@components/axios/index.inter'
+import { ContentStore } from './index'
 
 const url1:URLInterface = {
   path: 'common1/weather/get15DaysWeatherByArea' // 请求路径不包含域名
@@ -43,6 +44,7 @@ const axios = new BaseAxios({
 })
 
 export const ServiceItem = () => {
+  const [count, setCount] = useState<number>(0)
   const request = () => {
     allSettled([
       axios.request(url1), // 按照对应的域名来请求
@@ -61,9 +63,29 @@ export const ServiceItem = () => {
       })
     })
   }
-  return <Card>
-    <Space>
-      <Button type='primary' onClick={request}>发送请求</Button>
-    </Space>
-  </Card>
+
+  const a = () => {
+    setCount(() => (count + 1))
+  }
+
+  const onRender = (props:any) => {
+    console.log(props)
+  }
+
+  const value = useContext(ContentStore)
+
+  if (count === 5) {
+    throw new Error('I crashed!')
+  } else {
+    return <Card>
+      <Space>
+        <div>{value.name}</div>
+        <Profiler id='a' onRender={onRender}>
+          <Button onClick={a}>点击{count}</Button>
+          <Button type='primary' onClick={request}>发送请求</Button>
+        </Profiler>
+      </Space>
+    </Card>
+  }
+
 }

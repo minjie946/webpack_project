@@ -33,12 +33,13 @@
       "@assets/*": ["src/assets/*"],
       "@util/*": ["src/util/*"],
       "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
     },
     "typeRoots": ["typings/*.d.ts", "node_modules/@types"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true
   },
-  "exclude": ["node_modules", "config/*"],
-  "include": ["src/*", "typings/*.d.ts"]
+  "exclude": ["node_modules", "config/**/*"],
+  "include": ["src/**/*", "typings/*.d.ts"]
 }

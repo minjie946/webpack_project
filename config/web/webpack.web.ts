@@ -5,6 +5,7 @@ import path from 'path'
 import { Configuration, DefinePlugin } from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { config } from '../webpack.config'
 
 const packages = require('../../package.json')
 
@@ -114,13 +115,6 @@ export const ConfigInit = (mode: "development" | "production"):Configuration => 
         }
       ]
     },
-    resolve: {
-      alias: {
-        '@assets': path.resolve(__dirname, '../../src/assets'),
-        '@util': path.resolve(__dirname, '../../src/util'),
-        '@components': path.resolve(__dirname, '../../src/components')
-      },
-      extensions: ['.tsx', '.js', '.ts', '.less', '.css']
-    }
+    resolve: config.resolve
   }
 }
